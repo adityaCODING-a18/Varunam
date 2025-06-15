@@ -3,6 +3,42 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --font-poppins: var(--font-poppins);
+  --font-montserrat: var(--font-montserrat);
+  --font-inter: var(--font-inter);
+  --font-lato: var(--font-lato);
+  --font-oswald: var(--font-oswald);
+  --font-roboto: var(--font-roboto);
+  --font-orbitron: var(--font-orbitron);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.font-montserrat {
+  font-family: var(--font-montserrat);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+.font-lato {
+  font-family: var(--font-lato);
+}
+
+.font-oswald {
+  font-family: var(--font-oswald);
+}
+
+.font-roboto {
+  font-family: var(--font-roboto);
+}
+
+.font-orbitron {
+  font-family: var(--font-orbitron);
 }
 
 @theme inline {
