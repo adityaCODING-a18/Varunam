@@ -1,3 +1,5 @@
+// Add this at the top of the file
+export const dynamic = 'force-dynamic';
 import ArticleForm from './ArticleForm';
 
 export const metadata = {
