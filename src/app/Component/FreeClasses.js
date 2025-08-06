@@ -66,7 +66,12 @@ const FreeClasses = () => {
             ${isTv ? 'text-lg' : 'text-xs'}
           `}
         >
-          <img src="click.png" alt="click" className={`${isTv ? 'w-12' : 'w-10'}`} />
+          <Image
+            src="/click.png"
+            alt="click"
+            width={isTv ? 48 : 40}
+            height={isTv ? 48 : 40}
+          />
           Click Here
         </button>
       </div>
@@ -75,3 +80,4 @@ const FreeClasses = () => {
 };
 
 export default FreeClasses;
+  

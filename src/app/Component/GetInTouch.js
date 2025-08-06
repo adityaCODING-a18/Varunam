@@ -43,7 +43,7 @@ const GetInTouch = () => {
         <div className="mt-10 mb-10 p-5 w-[90vw] max-w-md mx-auto bg-white rounded-xl shadow-md">
             <p className="font-extrabold font-[poppins] text-2xl mb-2">Get In Touch</p>
             <p className="text-sm font-[poppins] mb-4">
-                Feel free to share any queries, feedback, complaints, or concerns. We're here to help and improve your experience.
+                Feel free to share any queries, feedback, complaints, or concerns. We&apos;re here to help and improve your experience.
             </p>
 
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 font-[poppins]">

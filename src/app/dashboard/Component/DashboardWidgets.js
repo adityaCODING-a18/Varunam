@@ -1,6 +1,8 @@
+'use client';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const DashboardWidgets = ({ isTeamMember }) => {
     const [data, setData] = useState([]);
@@ -44,10 +46,12 @@ const DashboardWidgets = ({ isTeamMember }) => {
                             >
                                 {/* Image container */}
                                 <div className="relative aspect-[3/4] 2xl:aspect-[3/2] w-full rounded-3xl overflow-hidden hover:scale-105 transition-all duration-500 transition-ease-in-out">
-                                    <img
+                                    <Image
                                         src={item.image}
-                                        alt=""
-                                        className="w-full h-full object-cover rounded-3xl"
+                                        alt={item.caption || 'Dashboard image'}
+                                        fill
+                                        className="object-cover rounded-3xl"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                     />
 
                                     {/* Text overlay */}
@@ -55,9 +59,11 @@ const DashboardWidgets = ({ isTeamMember }) => {
                                         {item.caption}
                                     </p>
                                 </div>
-                                <p className="text-sm font-[lato] mt-2 text-center">{item.author}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5 inline">
-                                    <path fillRule="evenodd" d="M16.403 12.652a3 3 0 0 0 0-5.304 3 3 0 0 0-3.75-3.751 3 3 0 0 0-5.305 0 3 3 0 0 0-3.751 3.75 3 3 0 0 0 0 5.305 3 3 0 0 0 3.75 3.751 3 3 0 0 0 5.305 0 3 3 0 0 0 3.751-3.75Zm-2.546-4.46a.75.75 0 0 0-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clipRule="evenodd" />
-                                </svg>
+                                <p className="text-sm font-[lato] mt-2 text-center">
+                                    {item.author}
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5 inline ml-1">
+                                        <path fillRule="evenodd" d="M16.403 12.652a3 3 0 0 0 0-5.304 3 3 0 0 0-3.75-3.751 3 3 0 0 0-5.305 0 3 3 0 0 0-3.751 3.75 3 3 0 0 0 0 5.305 3 3 0 0 0 3.75 3.751 3 3 0 0 0 5.305 0 3 3 0 0 0 3.751-3.75Zm-2.546-4.46a.75.75 0 0 0-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clipRule="evenodd" />
+                                    </svg>
                                 </p>
                             </motion.div>
                         ))}

@@ -7,12 +7,12 @@ export const metadata = {
   openGraph: {
     title: 'Dashboard | Varunam',
     description: 'Welcome to your personalized learning dashboard.',
-    url: 'https://yourdomain.com/dashboard',
+    url: 'https://varunam.com/dashboard',
     siteName: 'Varunam',
     type: 'website',
     images: [
       {
-        url: 'https://yourdomain.com/og/dashboard.jpg',
+        url: 'https://varnuam.com/og/dashboard.jpg',
         width: 1200,
         height: 630,
         alt: 'Varunam Dashboard Preview',
