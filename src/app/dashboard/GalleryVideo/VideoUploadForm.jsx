@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../Component/Navbar';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { useSearchParams } from 'next/navigation';
 
 const Page = () => {
   const {
@@ -13,12 +12,20 @@ const Page = () => {
     formState: { errors },
   } = useForm();
 
-  const searchParams = useSearchParams();
-  const author = searchParams.get('author');
-
+  const [author, setAuthor] = useState("anonymous");
   const [loading, setLoading] = useState(false);
   const [videoFile, setVideoFile] = useState(null);
   const [preview, setPreview] = useState('/black screen.jpg');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const searchParams = new URLSearchParams(window.location.search);
+      const authorParam = searchParams.get("author");
+      if (authorParam) {
+        setAuthor(authorParam);
+      }
+    }
+  }, []);
 
   const handleVideoChange = (e) => {
     const file = e.target.files[0];
@@ -48,7 +55,7 @@ const Page = () => {
     const formData = new FormData();
     formData.append('video', videoFile);
     formData.append('caption', data.caption);
-    formData.append('author', author || 'anonymous');
+    formData.append('author', author);
 
     try {
       const res = await axios.post('/api/VideoPost', formData, {
