@@ -1,21 +1,13 @@
-'use client'
-export const dynamic = 'force-dynamic';
+'use client';
 
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
-const FreeClasses = () => {
-  const router = useRouter();
-
+export default function FreeClasses() {
   useEffect(() => {
-    router.push('https://www.youtube.com/@varunamforvictory');
-  }, [router]);
+    if (typeof window !== 'undefined') {
+      window.location.href = 'https://www.youtube.com/@varunamforvictory';
+    }
+  }, []);
 
-  return (
-    <div>
-      Redirecting to free classes of Varunam...
-    </div>
-  );
-};
-
-export default FreeClasses;
+  return <p>Redirecting to free classes of Varunam...</p>;
+}
