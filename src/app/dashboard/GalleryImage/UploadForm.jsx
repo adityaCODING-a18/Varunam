@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = 'force-dynamic';
 import Navbar from "../Component/Navbar";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
