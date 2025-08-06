@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -9,13 +9,12 @@ module.exports = {
         poppins: ['var(--font-poppins)', 'sans-serif'],
         montserrat: ['var(--font-montserrat)', 'sans-serif'],
         inter: ['var(--font-inter)', 'sans-serif'],
-        // and so on...
-      },
-      colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        lato: ['var(--font-lato)', 'sans-serif'],
+        oswald: ['var(--font-oswald)', 'sans-serif'],
+        roboto: ['var(--font-roboto)', 'sans-serif'],
+        orbitron: ['var(--font-orbitron)', 'sans-serif'],
       },
     },
   },
   plugins: [],
-};
+}
