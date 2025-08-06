@@ -1,0 +1,91 @@
+.hero-section {
+  width: 100%;
+  background-color: #d4fffd;
+  overflow: hidden;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 90vw;
+  min-height: 20vh;
+  max-height: 40vh;
+  margin: 0em auto 1em auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #d4fffd;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  background-color: #d4fffd;
+  width: 100%;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Navigation Dots */
+.dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  .slider-container {
+    position: relative;
+    max-height: 60vh;
+    min-width: 60vw;
+    margin: 0 auto 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #d4fffd;
+    object-fit: contain;
+    aspect-ratio: 16 / 9;
+}
+
+}
+
+@media screen and (min-width: 1536px) {
+  .slider-container {
+    position: relative;
+    bottom: 2em;
+    max-height: 60vh;
+    min-width: 60vw;
+    margin: 0 auto 1em auto;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #d4fffd;
+    object-fit: contain;
+    aspect-ratio: 16 / 9;
+  }
+}

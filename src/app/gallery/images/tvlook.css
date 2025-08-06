@@ -1,0 +1,12 @@
+/* styles.css */
+.tvlook {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1800px) {
+  .tvlook {
+    width: 10vw;
+    height: 10vh;
+  }
+}

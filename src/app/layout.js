@@ -1,4 +1,3 @@
-// app/layout.js or app/layout.tsx
 import {
   Poppins,
   Montserrat,
@@ -7,10 +6,13 @@ import {
   Oswald,
   Roboto,
   Orbitron,
+  Rowdies,
 } from "next/font/google";
 
 import "./globals.css";
+import Providers from "./providers";
 
+// ✅ Font Configs
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
@@ -53,12 +55,17 @@ const orbitron = Orbitron({
   variable: "--font-orbitron",
 });
 
+const rowdies = Rowdies({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  variable: "--font-rowdies",
+});
 
-// app/layout.js or layout.tsx
+// ✅ Metadata
 export const metadata = {
   title: "Varunam for Victory",
   description:
-    "This is the official site of Varunam where all information about us is shared and updated over time. This site is created by a student of Varunam Institute, Aditya Raj.",
+    "Varunam is a leading coaching institute in Jehanabad, Bihar, helping students from Class 6 to 12 excel in boards and competitive exams with expert faculty, innovative teaching methods, and personal attention.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -66,16 +73,18 @@ export const metadata = {
   },
 };
 
-
+// ✅ Root Layout
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${montserrat.variable} ${inter.variable} ${lato.variable} ${oswald.variable} ${roboto.variable} ${orbitron.variable} antialiased`}
+        className={`${poppins.variable} ${montserrat.variable} ${inter.variable} ${lato.variable} ${oswald.variable} ${roboto.variable} ${orbitron.variable} ${rowdies.variable} antialiased`}
       >
-        {children}
+        {/* ✅ SessionProvider wraps the whole app for NextAuth */}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
 }
-

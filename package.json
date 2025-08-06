@@ -9,15 +9,31 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@hookform/resolvers": "^5.2.0",
+    "axios": "^1.10.0",
+    "bcryptjs": "^3.0.2",
+    "busboy": "^1.6.0",
+    "cloudinary": "^2.7.0",
+    "dotenv": "^17.2.0",
+    "formidable": "^3.5.4",
+    "framer-motion": "^12.23.12",
+    "googleapis": "^150.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.2",
+    "next": "15.3.2",
+    "next-auth": "^4.24.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.2"
+    "react-hook-form": "^7.60.0",
+    "react-hot-toast": "^2.5.2",
+    "zod": "^4.0.5"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4"
   }
 }
