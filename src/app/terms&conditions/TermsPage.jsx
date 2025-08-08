@@ -5,6 +5,7 @@ import Footer from '../Component/Footer';
 
 const TermsPage = () => {
   return (
+    <>  
     <div className="bg-[#F0F9FF] min-h-screen text-black font-[Poppins] p-5">
       <Navbar />
 
@@ -101,8 +102,9 @@ const TermsPage = () => {
           </p>
         </section>
       </div>
-      <Footer />
     </div>
+      <Footer />
+      </>
 
   );
 };

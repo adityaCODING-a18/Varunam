@@ -34,13 +34,19 @@ const Page = () => {
       {/* Buttons */}
       <div className="p-5 rounded-2xl flex justify-center mt-5 gap-5 bg-white/80 backdrop-sepia-0 max-w-[80vw] 2xl:max-w-[40vw] mx-auto">
         <button onClick={() => (window.location.href = "/gallery/images")} className="bg-white hover:bg-gray-100 text-black font-semibold py-2 px-4 border border-gray-400 rounded">
-          📷 <span className="ml-2 font-[poppins]">View Images</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 inline">
+  <path fillRule="evenodd" d="M1.5 6a2.25 2.25 0 0 1 2.25-2.25h16.5A2.25 2.25 0 0 1 22.5 6v12a2.25 2.25 0 0 1-2.25 2.25H3.75A2.25 2.25 0 0 1 1.5 18V6ZM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0 0 21 18v-1.94l-2.69-2.689a1.5 1.5 0 0 0-2.12 0l-.88.879.97.97a.75.75 0 1 1-1.06 1.06l-5.16-5.159a1.5 1.5 0 0 0-2.12 0L3 16.061Zm10.125-7.81a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z" clipRule="evenodd" />
+</svg>
+ <span className="ml-2 font-[poppins]">View Images</span>
         </button>
 
         <button
           className="bg-white hover:bg-gray-100 text-black font-semibold py-2 px-4 border border-gray-400 rounded"
         >
-          🎥 <span className="ml-2 font-[poppins]">View Videos</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 inline">
+  <path d="M4.5 4.5a3 3 0 0 0-3 3v9a3 3 0 0 0 3 3h8.25a3 3 0 0 0 3-3v-9a3 3 0 0 0-3-3H4.5ZM19.94 18.75l-2.69-2.69V7.94l2.69-2.69c.944-.945 2.56-.276 2.56 1.06v11.38c0 1.336-1.616 2.005-2.56 1.06Z" />
+</svg>
+ <span className="ml-2 font-[poppins]">View Videos</span>
         </button>
       </div>
 
