@@ -19,18 +19,17 @@ export const authOptions = {
     async signIn({ account, profile }) {
       if (account?.provider === "google") {
         console.log("✅ Google account detected:", profile.email);
-        // ✅ Only allow verified Gmail accounts
+
         const isVerifiedGmail =
           profile?.email_verified && profile?.email?.endsWith("@gmail.com");
 
         if (!isVerifiedGmail) return false;
 
-        // ✅ Check in DB
-        await dbConnect();
+        await dbConnect(); // Ensure DB connection before queries
+
         const existingUser = await User.findOne({ email: profile.email });
         const existingTeamMember = await TeamMember.findOne({ email: profile.email });
 
-        // ❌ Deny login if not pre-registered
         if (!existingUser && !existingTeamMember) {
           console.log("❌ User not registered:", profile.email);
           return false;

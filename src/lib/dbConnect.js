@@ -1,24 +1,26 @@
 import mongoose from "mongoose";
 
+let isConnected = false; // Track connection status
+
 export async function dbConnect() {
-    try {
-        await mongoose.connect(process.env.MONGODB_URI);
-        console.log("Connected to MongoDB");
+  if (isConnected) {
+    console.log("⚡ Using existing MongoDB connection");
+    return;
+  }
 
-        const connection = mongoose.connection;
-        connection.on("error", (error) => {
-            console.error("MongoDB connection error:", error);
-            process.exit(1);
-        });
+  if (!process.env.MONGODB_URI) {
+    throw new Error("❌ MONGODB_URI is not set in environment variables");
+  }
 
-        connection.once("open", () => {
-            console.log("MongoDB connection opened");
-        });
+  try {
+    const db = await mongoose.connect(process.env.MONGODB_URI, {
+      dbName: "your-db-name", // optional: change to your actual DB name if needed
+    });
 
-        return connection;
-
-    } catch (error) {
-        console.error("Error connecting to MongoDB:", error);
-        process.exit(1);
-    }
+    isConnected = db.connections[0].readyState === 1;
+    console.log("✅ MongoDB connected:", db.connection.host);
+  } catch (error) {
+    console.error("❌ MongoDB connection error:", error);
+    throw new Error("Failed to connect to MongoDB");
+  }
 }
