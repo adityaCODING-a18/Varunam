@@ -5,7 +5,7 @@ const UserLook = ({ img, username, fullname, teamMember }) => {
     return (
         <div className="mx-auto 2xl:mx-[10vw] m-5 2xl:m-10 2xl:pl-20 flex items-center gap-4 2xl:gap-14 bg-white p-4 rounded-xl shadow-md w-full max-w-md min-w-[80vw]">
             {img && (
-                <div className="w-56 h-56 relative rounded-full overflow-hidden border border-gray-300">
+                <div className="w-40 h-40 sm:w-56 sm:h-56 relative rounded-full overflow-hidden border border-gray-300">
                     <Image
                         src={img}
                         alt={`${username}'s avatar`}

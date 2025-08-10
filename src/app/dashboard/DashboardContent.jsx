@@ -24,7 +24,7 @@ const Dashboard = () => {
         });
 
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         setIsTeamMember(data.isTeamMember);
         setClientData(data.isTeamMember ? data.teamMember : data.student);
       } catch (err) {
