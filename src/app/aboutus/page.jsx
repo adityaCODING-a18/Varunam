@@ -27,16 +27,7 @@ Whether you're a student seeking clarity, a curious learner exploring your inter
             <li>A vibrant learning community for motivation and growth</li>
         </ul>
 
-        <p className='text-xl 2xl:text-3xl font-bold text-[#09817F] font-[poppins] mt-2 ml-5'>🧠 Meet the Creator Behind the Website</p>
-        <p className='text-md 2xl:text-lg font-[poppins] ml-10 p-2'>👋 Hey! I'm Aditya Raj, the developer behind the Varunam website. I specialize in crafting modern, high-performance websites with tools like Next.js, Next-Auth, TailwindCSS, React, and MongoDB — backed by real authentication and smooth UI/UX experiences.</p>
-        <p className='text-md 2xl:text-lg font-[poppins] ml-10 p-2'>If you're looking to build your own website — whether it's for your business, personal brand, or startup — I’d be happy to help you bring your vision to life.</p>
-
-        <p className='text-xl 2xl:text-3xl font-bold text-[#09817F] font-[poppins] mt-2 ml-5'>📩 Reach out to me:</p>
-        <p className='text-md 2xl:text-lg font-[poppins] ml-10 p-2'>📱 Instagram: <a href="https://www.instagram.com/aditya.raj_official_/" className='underline'>@aditya.raj_official_</a></p>
-        <p className='text-md 2xl:text-lg font-[poppins] ml-10 p-2'>🔗 LinkedIN: <a href="https://www.linkedin.com/in/aditya-raj-33a746372/" className='underline'>Aditya Raj - Full stack web developer</a></p>
-        <p className='text-md 2xl:text-lg font-[poppins] ml-10 p-2'>📧 GitHub Profile 👉: <a href="https://github.com/adityaCODING-a18" className='underline'>adityaCODING-a18</a></p>
-
-        <p className='text-xl 2xl:text-3xl font-bold text-[#09817F] font-[poppins] mt-2 ml-5'>🙏 Thank You for Being Part of Varunam</p>
+        <p className='text-xl 2xl:text-3xl font-bold text-[#09817F] font-[poppins] mt-20 ml-5'>🙏 Thank You for Being Part of Varunam</p>
         <p className='text-md 2xl:text-lg font-[poppins] ml-10 p-2 mb-56'>Every learner, every visitor, and every dreamer who interacts with Varunam contributes to its mission. This is just the beginning — and the best is yet to come.</p>
 
         <Footer />
