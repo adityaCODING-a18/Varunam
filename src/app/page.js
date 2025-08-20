@@ -35,8 +35,3 @@ export default function Home() {
     </>
   );
 }
-
-// git status                   # See changes
-// git add .                    # Stage all changes
-// git commit -m "Update code" # Commit
-// git push origin main         # Push to GitHub (replace 'main' with your branch name)
