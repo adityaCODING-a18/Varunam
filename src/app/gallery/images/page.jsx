@@ -66,7 +66,7 @@ const Page = () => {
               ${isTv ? "max-w-[40vw]" : "max-w-[90vw]"}
               2xl:max-w-[40vw] hover:scale-105 transition duration-300 ease-in-out`}
           >
-            <div className="relative aspect-[3/4] lg:aspect-[3/2] w-full rounded-3xl overflow-hidden">
+            <div className="relative aspect-[3/4] lg:aspect-[3/2] w-full hover:aspect-square  rounded-3xl overflow-hidden">
               <img
                 src={item.image}
                 alt={item.caption || "Gallery Image"}

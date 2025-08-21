@@ -14,6 +14,7 @@ export async function POST(req) {
     if (!student) {
       const teamMember = await TeamMember.findOne({ email });
       if (teamMember) {
+        console.log("Team Member found:", teamMember);
         return NextResponse.json({ isTeamMember: true, teamMember });
       }
     }
