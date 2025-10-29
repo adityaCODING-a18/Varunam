@@ -4,6 +4,9 @@ import axios from 'axios';
 import Navbar from '../Component/Navbar';
 import useDeviceType from '../../../hooks/useDeviceType'; // <-- Adjust path if needed
 
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+
 const Page = () => {
   const [data, setData] = useState([]);
   const deviceType = useDeviceType();
@@ -12,6 +15,7 @@ const Page = () => {
   const getData = async () => {
     try {
       const res = await axios.get("/api/blogGet");
+      console.log(res.data.posts[0].description);
       setData(res.data.posts);
     } catch (err) {
       console.log(err);
@@ -54,9 +58,11 @@ const Page = () => {
               </div>
 
               {/* Description */}
-              <p className="text-base sm:text-lg font-[lato] text-gray-800 text-justify">
-                {item.description}
-              </p>
+              <div className="text-base sm:text-lg font-[lato] text-gray-800 text-justify">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {item.description}
+                </ReactMarkdown>
+              </div>
 
               {/* Author */}
               <p className="text-sm sm:text-base font-[lato] text-gray-600 text-center flex items-center justify-center gap-1">

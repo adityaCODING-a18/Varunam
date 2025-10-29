@@ -3,7 +3,7 @@
 "use client";
 export const dynamic = 'force-dynamic';
 
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
 import Navbar from '../Component/Navbar';

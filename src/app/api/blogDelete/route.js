@@ -7,8 +7,8 @@ export async function DELETE(request) {
         
         await dbConnect();
 
-        const { id } = await request.json();
-        const result = await Post.deleteOne({ _id: id });
+        const { query } = await request.json();
+        const result = await Post.deleteOne({ title: query });
         if (result.deletedCount === 1) {
             return NextResponse.json({ message: "Post deleted successfully" }, { status: 200 });
         } else {

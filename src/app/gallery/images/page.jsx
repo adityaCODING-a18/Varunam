@@ -26,7 +26,7 @@ const Page = () => {
   if (deviceType === "unknown") return null;
 
   return (
-    <div className="bg-[#D4FFFD] w-screen overflow-x-hidden text-black">
+    <div className="bg-[#D4FFFD] w-screen min-h-screen overflow-x-hidden text-black">
       <Navbar />
 
       <p className="text-xl 2xl:text-3xl font-bold text-center text-[#09817F] font-[poppins] mt-10 p-2">
@@ -64,9 +64,9 @@ const Page = () => {
             viewport={{ once: true }}
             className={`relative bg-white/80 backdrop-sepia-0 p-5 rounded-3xl
               ${isTv ? "max-w-[40vw]" : "max-w-[90vw]"}
-              2xl:max-w-[40vw] hover:scale-105 transition duration-300 ease-in-out`}
+              2xl:max-w-[40vw] hover:scale-105 transition duration-1000 ease-in-out`}
           >
-            <div className="relative aspect-[3/4] lg:aspect-[3/2] w-full hover:aspect-square  rounded-3xl overflow-hidden">
+            <div className="relative aspect-[3/4] lg:aspect-[3/2] w-full hover:aspect-square transition duration-1000 ease-in-out rounded-3xl overflow-hidden">
               <img
                 src={item.image}
                 alt={item.caption || "Gallery Image"}
