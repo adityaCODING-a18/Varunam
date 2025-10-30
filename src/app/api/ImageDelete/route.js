@@ -1,12 +1,12 @@
 import { dbConnect } from "@/lib/dbConnect";
-import ImageModel from "@/app/models/Image.models";
+import Image from "@/app/models/Image.models";
 import { NextResponse } from "next/server";
 
 export async function DELETE(request) {
     try {
         await dbConnect();
         const { query } = await request.json();
-        const result = await ImageModel.deleteOne({ caption: query });
+        const result = await Image.deleteOne({ caption: query });
         if (result.deletedCount === 1) {
             return NextResponse.json({ message: "Image deleted successfully" }, { status: 200 });
         } else {

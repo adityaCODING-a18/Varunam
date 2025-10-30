@@ -27,6 +27,7 @@ const DeleteContent = () => {
   const onQuerySubmit = async (data) => {
     if (isSelected) {
       if (watch("content_type") === "image") {
+        alert('Deleting Image with caption: ' + data.query);
         try {
           const response = await axios.delete('/api/ImageDelete', {
             data: {
@@ -35,7 +36,7 @@ const DeleteContent = () => {
             }
           });
           console.log('Delete Response:', response.data);
-          alert('Content deleted successfully!');
+          alert('Content deleted successfully! Now you leave this page.');
         } catch (error) {
           console.error('Error deleting content:', error);
           alert('Failed to delete content.');
@@ -50,7 +51,7 @@ const DeleteContent = () => {
             }
           });
           console.log('Delete Response:', response.data);
-          alert('Content deleted successfully!');
+          alert('Content deleted successfully! Now you leave this page.');
         } catch (error) {
           console.error('Error deleting content:', error);
           alert('Failed to delete content.');
@@ -58,7 +59,7 @@ const DeleteContent = () => {
       }
       else if (watch("content_type") === "article") {
         try {
-          const response = await axios.delete('/api/ArticleDelete', {
+          const response = await axios.delete('/api/blogDelete', {
             data: {
               content_type: 'article',
               query: data.query
