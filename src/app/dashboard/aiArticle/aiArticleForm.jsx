@@ -2,7 +2,7 @@
 export const dynamic = 'force-dynamic';
 
 import 'dotenv/config';
-import React, { useState, useRef} from 'react'
+import React, { useState, useRef } from 'react'
 import Navbar from '../Component/Navbar'
 import { useForm } from 'react-hook-form';
 import { FaSearch } from "react-icons/fa";
@@ -142,33 +142,24 @@ The final result should feel like it was written by a world-class expert who can
 
     // Logic to generate article based on the topic aka Api call has been done here
     try {
-      await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      const res = await fetch("/api/chat", {
         method: "POST",
-        headers: {
-          "Authorization": `Bearer ${process.env.NEXT_PUBLIC_AI_API_KEY}`,
-          "HTTP-Referer": "http://localhost:3000", // Optional. Site URL for rankings on openrouter.ai.
-          "X-Title": "Varunam", // Optional. Site title for rankings on openrouter.ai.
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          "model": "openai/gpt-oss-20b:free",
-          "messages": [
-            {
-              "role": "user",
-              "content": prompt
-            }
-          ]
-        })
-      }).then(res => res.json()).then(async data => {
-        setIsgenerated(true);
-        setArticle(prev => ({
-          ...prev,
-          title: topic,
-          content: data.choices[0].message.content
-        }));
-        await generateArticleImage(topic);
-        console.log("Generated ✨ Article Successfully");
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt, topic }),
       });
+
+      const data = await res.json();
+
+      setIsgenerated(true);
+      setArticle(prev => ({
+        ...prev,
+        title: topic,
+        content: data.choices?.[0]?.message?.content || "No response",
+      }));
+
+      await generateArticleImage(topic);
+      console.log("✨ Generated Article Successfully");
+
     } finally {
       setPrimeLoading(false);
     }
