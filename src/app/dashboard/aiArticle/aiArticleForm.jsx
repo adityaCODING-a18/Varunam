@@ -52,23 +52,10 @@ Each title should be wrapped in double quotes.
 
 Do not include any numbering, explanations, or extra text.`;
 
-      await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      await fetch("/api/chat", {
         method: "POST",
-        headers: {
-          "Authorization": `Bearer ${process.env.NEXT_PUBLIC_AI_API_KEY}`,
-          "HTTP-Referer": "http://localhost:3000", // Optional. Site URL for rankings on openrouter.ai.
-          "X-Title": "Varunam", // Optional. Site title for rankings on openrouter.ai.
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          "model": "openai/gpt-oss-20b:free",
-          "messages": [
-            {
-              "role": "user",
-              "content": prompt
-            }
-          ]
-        })
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt }),
       }).then(res => res.json()).then(data => {
         const output = data.choices[0].message.content;
         try {
@@ -145,7 +132,7 @@ The final result should feel like it was written by a world-class expert who can
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt, topic }),
+        body: JSON.stringify({ prompt }),
       });
 
       const data = await res.json();
