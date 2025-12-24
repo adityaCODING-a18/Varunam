@@ -8,7 +8,6 @@ const images = [
   '/studentone.png',
   '/studenttwo.png',
   '/studentthree.png',
-  '/studentfour.png',
 ];
 
 const AutoSlider = () => {

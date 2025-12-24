@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import Navbar from "@/app/Component/Navbar";
 
 export default async function Page({ params }) {
