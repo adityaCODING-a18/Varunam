@@ -20,44 +20,53 @@ function ArticleForm() {
     formState: { errors },
   } = useForm();
 
+  const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [preview, setPreview] = useState("/black screen.jpg");
 
   const handlePhotoChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setPreview(reader.result);
-        setValue("photo", reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
+    const selectedFile = e.target.files[0];
+    if (!selectedFile) return;
+
+    setFile(selectedFile);
+    setPreview(URL.createObjectURL(selectedFile));
   };
 
   const onSubmit = async (data) => {
+    if (!file) {
+      alert("Please select an image.");
+      return;
+    }
+
     alert("Uploading your Article");
     setLoading(true);
-    await axios.post("/api/blogPost", {
-      image: data.photo,
-      title: data.title,
-      description: data.description,
-      author: author
-    }, {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-      .then(() => {
-        alert("Article uploaded successfully!");
-      })
-      .catch(() => {
-        alert("Article upload failed!");
-      })
-      .finally(() => {
-        setLoading(false);
+
+    try {
+      
+      const formData = new FormData();
+      formData.append("image", file);
+      formData.append("title", data.title);
+      formData.append("description", data.description);
+      formData.append("author", author);
+
+      await axios.post("/api/blogPost", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
       });
+
+      alert("Article uploaded successfully!");
+      setFile(null);
+      setPreview("/black screen.jpg");
+      setLoading(false);
+
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong!");
+      setLoading(false);
+    }
   };
+
 
   return (
     <>

@@ -5,6 +5,7 @@ import Navbar from '../Component/Navbar';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
+
 const Page = () => {
   const {
     register,
@@ -14,6 +15,7 @@ const Page = () => {
 
   const [author, setAuthor] = useState("anonymous");
   const [loading, setLoading] = useState(false);
+  const [file, setFile] = useState(null);
   const [videoFile, setVideoFile] = useState(null);
   const [preview, setPreview] = useState('/black screen.jpg');
 
@@ -28,13 +30,13 @@ const Page = () => {
   }, []);
 
   const handleVideoChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setVideoFile(file);
-      const previewURL = URL.createObjectURL(file);
-      setPreview(previewURL);
-    }
+    const selectedFile = e.target.files[0];
+    if (!selectedFile) return;
+
+    setVideoFile(selectedFile);  // store in correct state
+    setPreview(URL.createObjectURL(selectedFile));
   };
+
 
   useEffect(() => {
     return () => {
@@ -51,28 +53,30 @@ const Page = () => {
     }
 
     setLoading(true);
-
-    const formData = new FormData();
-    formData.append('video', videoFile);
-    formData.append('caption', data.caption);
-    formData.append('author', author);
-
     try {
-      const res = await axios.post('/api/VideoPost', formData, {
+      const formData = new FormData();
+      formData.append("video", videoFile);
+      formData.append("caption", data.caption);
+      formData.append("author", author);
+
+      await axios.post("/api/VideoPost", formData, {
         headers: {
-          'Content-Type': 'multipart/form-data',
+          "Content-Type": "multipart/form-data",
         },
       });
+
       alert('Video uploaded successfully!');
       setVideoFile(null);
       setPreview('/black screen.jpg');
+      setLoading(false);
     } catch (err) {
       console.error(err);
-      alert('Upload failed!');
-    } finally {
+      alert('Something went wrong!');
       setLoading(false);
     }
   };
+
+
 
   return (
     <div className="bg-[#D4FFFD] w-screen min-h-screen overflow-x-hidden text-black font-[poppins]">

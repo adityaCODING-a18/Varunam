@@ -7,42 +7,53 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 
+
 const GalleryForm = () => {
   const { register, handleSubmit, setValue, formState: { errors } } = useForm();
   const searchParams = useSearchParams();
   const author = searchParams.get("author");
 
+  const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [preview, setPreview] = useState("/black screen.jpg");
 
   const handlePhotoChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setPreview(reader.result);
-        setValue("photo", reader.result);
-      };
-      reader.readAsDataURL(file);
+    const selectedFile = e.target.files[0];
+    if (!selectedFile) return;
+
+    setFile(selectedFile);
+    setPreview(URL.createObjectURL(selectedFile));
+  };
+
+
+  const onSubmit = async (data) => {
+    if (!file) return alert("Please select an image");
+
+    setLoading(true);
+    alert("Uploading your image");
+
+    try {
+      const formData = new FormData();
+      formData.append("image", file);
+      formData.append("caption", data.caption);
+      formData.append("author", author);
+
+      await axios.post("/api/ImagePost", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
+      alert("Image uploaded successfully!");
+      setLoading(false);
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong");
+      setLoading(false);
     }
   };
 
-  const onSubmit = async (data) => {
-    alert("Uploading your image");
-    setLoading(true);
-    await axios.post("/api/ImagePost", {
-      image: data.photo,
-      caption: data.caption,
-      author: author,
-    }, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-    .then(() => alert("Image uploaded successfully!"))
-    .catch(() => alert("Image upload failed!"))
-    .finally(() => setLoading(false));
-  };
+
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center gap-5 mt-10">

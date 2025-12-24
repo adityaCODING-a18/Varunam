@@ -1,7 +1,6 @@
 "use client";
 export const dynamic = 'force-dynamic';
 
-import 'dotenv/config';
 import React, { useState, useRef } from 'react'
 import Navbar from '../Component/Navbar'
 import { useForm } from 'react-hook-form';
@@ -17,6 +16,7 @@ const AiArticleForm = () => {
     formState: { errors },
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
+  const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [topics, setTopics] = useState([]);
   const [article, setArticle] = useState({});
@@ -78,6 +78,13 @@ Do not include any numbering, explanations, or extra text.`;
     setTimeout(() => setCopiedIndex(null), 3000);
   };
 
+  const base64ToFile = async (base64, filename) => {
+    const res = await fetch(base64);
+    const blob = await res.blob();
+    return new File([blob], filename, { type: blob.type });
+  };
+
+
   const generateArticleImage = async (title) => {
     try {
       const prompt = `Create a visually captivating and thematically relevant image that encapsulates the essence of the article titled: "${title}". The image should be designed to engage readers and complement the article's content effectively.`;
@@ -92,10 +99,18 @@ Do not include any numbering, explanations, or extra text.`;
       });
       const url = await response.json();
 
+      const imageBase64 = "data:image/png;base64," + url.image_url;
+
+      const imageFile = await base64ToFile(imageBase64, "article.png");
+
       setArticle(prev => ({
         ...prev,
-        image: "data:image/png;base64," + url.image_url
+        image: imageBase64,
       }));
+
+      setFile(imageFile);
+
+
     } catch (err) {
       console.error(err);
     }
@@ -153,26 +168,32 @@ The final result should feel like it was written by a world-class expert who can
   }
 
   const uploadArticle = async () => {
+    if (!file) return alert("Please select an image");
+
     setLoading(true);
-    await axios.post("/api/blogPost", {
-      image: article.image,
-      title: article.title,
-      description: article.content,
-      author: author
-    }, {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-      .then(() => {
-        alert("Article uploaded successfully!");
-      })
-      .catch(() => {
-        alert("Article upload failed!");
-      })
-      .finally(() => {
-        setLoading(false);
+    alert("Uploading your article");
+
+    try {
+      const formData = new FormData();
+      formData.append("image", file);
+      formData.append("title", article.title);
+      formData.append("description", article.content);
+      formData.append("author", author);
+
+      await axios.post("/api/blogPost", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
       });
+
+      alert("Article uploaded successfully!");
+      setLoading(false);
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong");
+      setLoading(false);
+    }
+
   }
 
   return (

@@ -1,40 +1,63 @@
 import { dbConnect } from "@/lib/dbConnect";
 import Post from "@/app/models/Post.models";
+import imagekit from "@/lib/imagekit";
 import { NextResponse } from "next/server";
-import cloudinary from "cloudinary";
-
-cloudinary.config({
-    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-    api_key: process.env.CLOUDINARY_API_KEY,
-    api_secret: process.env.CLOUDINARY_API_SECRET,
-});
 
 export async function POST(request) {
-    try {
-        // Connect to MongoDB
-        await dbConnect();
+  try {
+    await dbConnect();
 
-        // Get data from request body
-        const { title, image, description, author } = await request.json();
+    const formData = await request.formData();
 
-        // upload image to cloudinary
-        const imagepost = await cloudinary.uploader.upload(image, { resource_type: "image", folder: "blog-images" });
+    const title = formData.get("title");
+    const description = formData.get("description");
+    const author = formData.get("author");
+    const file = formData.get("image");
 
-        // Create a new post
-        const newPost = new Post({
-            title,
-            image: imagepost?.secure_url || "",
-            description,
-            author
-        });
-
-        // Save the post
-        await newPost.save();
-
-        return NextResponse.json({ success: true, message: "Post created successfully", newPost }, { status: 201 });
-
-    } catch (error) {
-        console.log("Error connecting to MongoDB:", error);
-        return NextResponse.json({ success: false, error: "Error connecting to MongoDB" }, { status: 500 });
+    if (!file) {
+      return NextResponse.json(
+        { success: false, message: "Image is required" },
+        { status: 400 }
+      );
     }
+
+    // Convert file to buffer
+    const bytes = await file.arrayBuffer();
+    const buffer = Buffer.from(bytes);
+
+    // Upload image to ImageKit
+    const uploadResponse = await imagekit.upload({
+      file: buffer,
+      fileName: file.name,
+      folder: "/post_images",
+    });
+
+    // Create post
+    const newPost = new Post({
+      title,
+      image: uploadResponse.url, // ImageKit URL
+      description,
+      author,
+    });
+
+    await newPost.save();
+
+    return NextResponse.json(
+      {
+        success: true,
+        message: "Post created successfully",
+        data: newPost,
+      },
+      { status: 201 }
+    );
+  } catch (error) {
+    console.error("Post creation error:", error);
+    return NextResponse.json(
+      {
+        success: false,
+        message: error.message || "Error creating post",
+      },
+      { status: 500 }
+    );
+  }
 }

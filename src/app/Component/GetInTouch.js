@@ -21,10 +21,10 @@ const GetInTouch = () => {
 
         emailjs
             .send(
-                process.env.SERVICE,   
-                process.env.TEMPLATE,     
+                process.env.NEXT_PUBLIC_SERVICE,   
+                process.env.NEXT_PUBLIC_TEMPLATE,     
                 templateParams,
-                process.env.PUBLIC_KEY      
+                process.env.NEXT_PUBLIC_PUBLIC_KEY      
             )
             .then(
                 (response) => {

@@ -10,6 +10,14 @@ const Material = () => {
 
   if (deviceType === 'unknown') return null; // Wait for hydration
 
+  const pagesDict = {
+    "question.png": "PreviousYearQuestions",
+    "sample.png": "SamplePapers",
+    "study.png": "StudyNotes",
+    "formula.png": "NotesAndFormulas",
+    "assignment.png": "Assignments",
+  }
+
   return (
     <>
       <div
@@ -47,7 +55,7 @@ const Material = () => {
                 ${isTv ? 'min-w-[40vw] max-w-[40vw]' : 'min-w-[70vw] max-w-[70vw] sm:min-w-[50vw] 2xl:min-w-[30vw]'}
               `}
             >
-              <button onClick={() => (window.location.href = '/blog')}>
+              <button onClick={() => (window.location.href = '/resources/'+pagesDict[src].toLowerCase())}>
                 <Image
                   src={`/${src}`}
                   alt={`Material ${i + 1}`}

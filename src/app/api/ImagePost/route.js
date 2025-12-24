@@ -1,35 +1,61 @@
 import { dbConnect } from "@/lib/dbConnect";
 import Image from "@/app/models/Image.models";
+import imagekit from "@/lib/imagekit";
 import { NextResponse } from "next/server";
-import cloudinary from "cloudinary";
-
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
-});
 
 export async function POST(request) {
   try {
-
     await dbConnect();
 
-    const { image, caption, author} = await request.json();
-    const result = await cloudinary.uploader.upload(image, { resource_type: "image", folder: "gallery-images" });
-    const newImage = new Image({
-      image: result.secure_url,
-      caption,
-      author
+    const formData = await request.formData();
+
+    const file = formData.get("image");
+    const caption = formData.get("caption");
+    const author = formData.get("author");
+
+    if (!file) {
+      return NextResponse.json(
+        { success: false, message: "No file provided" },
+        { status: 400 }
+      );
+    }
+
+    // Convert file to buffer
+    const bytes = await file.arrayBuffer();
+    const buffer = Buffer.from(bytes);
+
+    // Upload to ImageKit
+    const uploadResponse = await imagekit.upload({
+      file: buffer,
+      fileName: file.name,
+      folder: "/nextjs_uploads",
     });
+
+    // Save to MongoDB
+    const newImage = new Image({
+      image: uploadResponse.url, // ImageKit URL
+      caption,
+      author,
+    });
+
     await newImage.save();
 
-    return NextResponse.json({ success: true, message: "Image uploaded successfully", newImage }, { status: 201 });
-
+    return NextResponse.json(
+      {
+        success: true,
+        message: "Image uploaded successfully",
+        data: newImage,
+      },
+      { status: 201 }
+    );
   } catch (error) {
-    console.log("Error connecting to MongoDB:", error);
-    return NextResponse.json({
-      success: false,
-      error: error.message || "Error uploading image",
-    })
+    console.error("Upload error:", error);
+    return NextResponse.json(
+      {
+        success: false,
+        message: error.message || "Error uploading image",
+      },
+      { status: 500 }
+    );
   }
 }
