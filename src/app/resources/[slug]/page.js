@@ -28,6 +28,23 @@ export default async function Page({ params }) {
             slug==="studynotes" && 
             <>
                 <h1 className="text-center text-3xl font-extrabold m-5 font-[poppins]">Study Notes</h1>
+                <p className="ml-10 text-2xl font-medium m-5 font-[poppins]">Biology, Chemistry, Physics and Maths for class 6th to 10th</p>
+                <dl className="m-10 font-[poppins] text-lg leading-8">
+                    <dt className="font-bold">Class 6th</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1UcX_btNVWQWB79cJ-xvpOzfalTvAOwUl">https://drive.google.com/drive/folders/1UcX_btNVWQWB79cJ-xvpOzfalTvAOwUl</a></span></dd>
+                    
+                    <dt className="font-bold">Class 7th</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1XipoP5Iermq0P6l31rUkfSRylmh7jRGg">https://drive.google.com/drive/folders/1XipoP5Iermq0P6l31rUkfSRylmh7jRGg</a></span></dd>
+                    
+                    <dt className="font-bold">Class 8th</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1CKGpP_fU3LtO3IFFCWa6d_45ENTY7y5O">https://drive.google.com/drive/folders/1CKGpP_fU3LtO3IFFCWa6d_45ENTY7y5O</a></span></dd>
+                    
+                    <dt className="font-bold">Class 9th</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1pE9Gydhm7X8P7Rap25FjKd329NNyGcL0">https://drive.google.com/drive/folders/1pE9Gydhm7X8P7Rap25FjKd329NNyGcL0</a></span></dd>
+                    
+                    <dt className="font-bold">Class 10th</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1Z6OechiY4Nzw9y8vvJ7zuV9qcAn-WCsI">https://drive.google.com/drive/folders/1Z6OechiY4Nzw9y8vvJ7zuV9qcAn-WCsI</a></span></dd>
+                </dl>
             </>
         }
         {
