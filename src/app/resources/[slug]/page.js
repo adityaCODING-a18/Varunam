@@ -22,6 +22,27 @@ export default async function Page({ params }) {
             slug==="samplepapers" && 
             <>
                 <h1 className="text-center text-3xl font-extrabold m-5 font-[poppins]">Sample Papers</h1>
+                <dl className="m-10 font-[poppins] text-lg leading-8">
+                    <dt className="font-bold">Case Study based Question for Maths</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dt className="font-bold">Case Study based Question for Science</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dt className="font-bold">Class 10th English Question Bank</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dt className="font-bold">English Language and Literature Sample Papers</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dt className="font-bold">Hindi Sample Papers</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dt className="font-bold">Information Technology Sample Papers</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dt className="font-bold">Mathematics Sample Papers</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dt className="font-bold">Science Sample Papers</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dt className="font-bold">Social Science Sample Papers</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+
+                </dl>
             </>
         }
         {
