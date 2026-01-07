@@ -78,6 +78,17 @@ export default async function Page({ params }) {
             slug==="assignments" && 
             <>
                 <h1 className="text-center text-3xl font-extrabold m-5 font-[poppins]">Assignments and Worksheet</h1>
+                <p className="ml-10 text-2xl font-medium m-5 font-[poppins]">Biology, Chemistry, Physics for class 10th</p>
+                <dl className="m-10 font-[poppins] text-lg leading-8">
+                    <dt className="font-bold">Class 10th</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1JV-u2tDAFZYtZN99LDiLCgKNlNEo_M_-">https://drive.google.com/drive/folders/1JV-u2tDAFZYtZN99LDiLCgKNlNEo_M_-</a></span></dd>
+                </dl>
+
+                <p className="ml-10 text-2xl font-medium m-5 font-[poppins]">Laws of Motion Momentum for Class 11th</p>
+                <dl className="m-10 font-[poppins] text-lg leading-8">
+                    <dt className="font-bold">Class 11th</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1N_ORb6JtV7ph7qzgmHzshRzDNC7ufQL3">https://drive.google.com/drive/folders/1N_ORb6JtV7ph7qzgmHzshRzDNC7ufQL3</a></span></dd>
+                </dl>
             </>
         }
         
