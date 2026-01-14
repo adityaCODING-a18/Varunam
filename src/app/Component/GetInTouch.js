@@ -21,10 +21,10 @@ const GetInTouch = () => {
 
         emailjs
             .send(
-                process.env.NEXT_PUBLIC_SERVICE,   
-                process.env.NEXT_PUBLIC_TEMPLATE,     
+                process.env.NEXT_PUBLIC_SERVICE,
+                process.env.NEXT_PUBLIC_TEMPLATE,
                 templateParams,
-                process.env.NEXT_PUBLIC_PUBLIC_KEY      
+                process.env.NEXT_PUBLIC_PUBLIC_KEY
             )
             .then(
                 (response) => {
@@ -40,7 +40,7 @@ const GetInTouch = () => {
     };
 
     return (
-        <div className="mt-10 mb-10 p-5 w-[90vw] max-w-md mx-auto bg-white rounded-xl shadow-md">
+        <div id="get-in-touch" className="mt-8 mb-4 p-6 w-[95vw] max-w-md mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 scroll-mt-24">
             <p className="font-extrabold font-[poppins] text-2xl mb-2">Get In Touch</p>
             <p className="text-sm font-[poppins] mb-4">
                 Feel free to share any queries, feedback, complaints, or concerns. We&apos;re here to help and improve your experience.
