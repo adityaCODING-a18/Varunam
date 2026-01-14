@@ -2,14 +2,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const BatchCard = ({ title, description, features}) => {
+const BatchCard = ({ title, description, features, id }) => {
   return (
     <motion.div
+      id={id}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
       viewport={{ once: true }}
-      className="bg-white shadow-lg rounded-xl p-6 mb-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl"
+      className="bg-white shadow-lg rounded-xl p-6 mb-8 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl scroll-mt-24"
     >
       <h2 className="text-xl font-semibold text-gray-800 mb-2">{title}</h2>
       <p className="text-gray-600 mb-4">{description}</p>

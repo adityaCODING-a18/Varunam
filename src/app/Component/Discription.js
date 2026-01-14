@@ -14,7 +14,7 @@ const Discription = (props) => {
 
         {/* Centered Button */}
         <div className="flex justify-center hover:transform hover:scale-105 transition duration-300">
-          <button onClick={ () => { window.location.href = props.link }} className="text-[#09817F] px-10 py-1 rounded-4xl font-bold drop-shadow-xl/20 text-xs bg-gradient-to-r from-[#09817f38] to-white hover:from-[#05625f] hover:to-gray-100 transition duration-300 hover:text-black">
+          <button onClick={() => { window.location.href = props.link }} className="text-[#09817F] px-10 py-1 rounded-4xl font-bold drop-shadow-xl/20 text-xs bg-gradient-to-r from-[#09817f38] to-white hover:from-[#05625f] hover:to-gray-100 transition duration-300 hover:text-black">
             {props.btntext}
           </button>
         </div>

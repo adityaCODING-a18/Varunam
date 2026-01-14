@@ -10,7 +10,7 @@ const Facilities = () => {
   if (deviceType === 'unknown') return null;
 
   return (
-    <>
+    <div id="facilities" className="scroll-mt-24">
       <p className={`font-extrabold text-black text-2xl text-center font-[poppins] ${isTv ? 'mt-10 mb-6 text-4xl' : 'mt-2 mb-2 sm:mt-6 xl:mt-16'}`}>
         Why choose Varunam
       </p>
@@ -40,9 +40,8 @@ const Facilities = () => {
               height={500}
               quality={100}
               priority
-              className={`mx-auto w-[80%] object-contain ${
-                isTv ? 'h-[60%] mt-6 mb-4' : 'h-[50%] m-2 2xl:mt-10'
-              }`}
+              className={`mx-auto w-[80%] object-contain ${isTv ? 'h-[60%] mt-6 mb-4' : 'h-[50%] m-2 2xl:mt-10'
+                }`}
             />
             <p className={`text-center font-[poppins] ${isTv ? 'text-base mt-1 m-2' : 'text-xs'}`}>
               {item.text}
@@ -50,7 +49,7 @@ const Facilities = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
