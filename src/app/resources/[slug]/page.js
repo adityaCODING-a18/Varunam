@@ -12,9 +12,9 @@ export default async function Page({ params }) {
                 <h1 className="text-center text-3xl font-extrabold m-5 font-[poppins]">Previous Year Questions</h1>
                 <dl className="m-10 font-[poppins] text-lg leading-8">
                     <dt className="font-bold">Science and Maths for class 10th</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1zcFkvVzXwyDkskNuw1syVhPCAA3tQds1">https://drive.google.com/drive/folders/1zcFkvVzXwyDkskNuw1syVhPCAA3tQds1</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/17zDonKyg0KGQ1YjCKMSX52FlxXXC2OSj">https://drive.google.com/drive/folders/17zDonKyg0KGQ1YjCKMSX52FlxXXC2OSj</a></span></dd>
                     <dt className="font-bold">Physics for class 12th</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1nlhT8PLSmNw4KyDifsU2giH0MyKfsJB1">https://drive.google.com/drive/folders/1nlhT8PLSmNw4KyDifsU2giH0MyKfsJB1</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1O_dMw-pZsJ74kk2l_WmdtAzLGgt7JjSA">https://drive.google.com/drive/folders/1O_dMw-pZsJ74kk2l_WmdtAzLGgt7JjSA</a></span></dd>
                 </dl>
             </>
         }
@@ -24,23 +24,23 @@ export default async function Page({ params }) {
                 <h1 className="text-center text-3xl font-extrabold m-5 font-[poppins]">Sample Papers</h1>
                 <dl className="m-10 font-[poppins] text-lg leading-8">
                     <dt className="font-bold">Case Study based Question for Maths</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy">https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy</a></span></dd>
                     <dt className="font-bold">Case Study based Question for Science</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy">https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy</a></span></dd>
                     <dt className="font-bold">Class 10th English Question Bank</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy">https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy</a></span></dd>
                     <dt className="font-bold">English Language and Literature Sample Papers</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy">https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy</a></span></dd>
                     <dt className="font-bold">Hindi Sample Papers</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy">https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy</a></span></dd>
                     <dt className="font-bold">Information Technology Sample Papers</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy">https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy</a></span></dd>
                     <dt className="font-bold">Mathematics Sample Papers</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy">https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy</a></span></dd>
                     <dt className="font-bold">Science Sample Papers</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy">https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy</a></span></dd>
                     <dt className="font-bold">Social Science Sample Papers</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox">https://drive.google.com/drive/folders/1xH98_v18bgZpsB3KJ2BCR1PzVa9l_eox</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy">https://drive.google.com/drive/folders/1HBbNQSfvEuINWPZEEbReVkLHzcV56hYy</a></span></dd>
 
                 </dl>
             </>
@@ -52,19 +52,19 @@ export default async function Page({ params }) {
                 <p className="ml-10 text-2xl font-medium m-5 font-[poppins]">Biology, Chemistry, Physics and Maths for class 6th to 10th</p>
                 <dl className="m-10 font-[poppins] text-lg leading-8">
                     <dt className="font-bold">Class 6th</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1UcX_btNVWQWB79cJ-xvpOzfalTvAOwUl">https://drive.google.com/drive/folders/1UcX_btNVWQWB79cJ-xvpOzfalTvAOwUl</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/17iLsWprlwvcBNoeyYAhqT6nuE4R_NyyM">https://drive.google.com/drive/folders/17iLsWprlwvcBNoeyYAhqT6nuE4R_NyyM</a></span></dd>
                     
                     <dt className="font-bold">Class 7th</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1XipoP5Iermq0P6l31rUkfSRylmh7jRGg">https://drive.google.com/drive/folders/1XipoP5Iermq0P6l31rUkfSRylmh7jRGg</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1OeOWu44FddEz1LoJU6bRzW_VlTFGAlmw">https://drive.google.com/drive/folders/1OeOWu44FddEz1LoJU6bRzW_VlTFGAlmw</a></span></dd>
                     
                     <dt className="font-bold">Class 8th</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1CKGpP_fU3LtO3IFFCWa6d_45ENTY7y5O">https://drive.google.com/drive/folders/1CKGpP_fU3LtO3IFFCWa6d_45ENTY7y5O</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1A0jp4I46CzMZTZGuIHLCUySunhtJItMP">https://drive.google.com/drive/folders/1A0jp4I46CzMZTZGuIHLCUySunhtJItMP</a></span></dd>
                     
                     <dt className="font-bold">Class 9th</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1pE9Gydhm7X8P7Rap25FjKd329NNyGcL0">https://drive.google.com/drive/folders/1pE9Gydhm7X8P7Rap25FjKd329NNyGcL0</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1Eyr3K-69Of7wet_DZLDU78qFlTB0ZAqA">https://drive.google.com/drive/folders/1Eyr3K-69Of7wet_DZLDU78qFlTB0ZAqA</a></span></dd>
                     
                     <dt className="font-bold">Class 10th</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1Z6OechiY4Nzw9y8vvJ7zuV9qcAn-WCsI">https://drive.google.com/drive/folders/1Z6OechiY4Nzw9y8vvJ7zuV9qcAn-WCsI</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1MMcPQb_wKHZXLotult1QB6On1WGqLKzx">https://drive.google.com/drive/folders/1MMcPQb_wKHZXLotult1QB6On1WGqLKzx</a></span></dd>
                 </dl>
             </>
         }
@@ -72,6 +72,15 @@ export default async function Page({ params }) {
             slug==="notesandformulas" && 
             <>
                 <h1 className="text-center text-3xl font-extrabold m-5 font-[poppins]">Notes and Formulas Sheet</h1>
+                <dl className="m-10 font-[poppins] text-lg leading-8">
+                    <dt className="font-bold">Physics formula Sheet</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1Ft-VLtXixaWoo7JCV4H57HSCMHKZ3INo">https://drive.google.com/drive/folders/1Ft-VLtXixaWoo7JCV4H57HSCMHKZ3INo</a></span></dd>
+                </dl>
+
+                <dl className="m-10 font-[poppins] text-lg leading-8">
+                    <dt className="font-bold">Trigonometry formula sheet</dt>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1Ft-VLtXixaWoo7JCV4H57HSCMHKZ3INo">https://drive.google.com/drive/folders/1Ft-VLtXixaWoo7JCV4H57HSCMHKZ3INo</a></span></dd>
+                </dl>
             </>
         }
         {
@@ -81,13 +90,13 @@ export default async function Page({ params }) {
                 <p className="ml-10 text-2xl font-medium m-5 font-[poppins]">Biology, Chemistry, Physics for class 10th</p>
                 <dl className="m-10 font-[poppins] text-lg leading-8">
                     <dt className="font-bold">Class 10th</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1JV-u2tDAFZYtZN99LDiLCgKNlNEo_M_-">https://drive.google.com/drive/folders/1JV-u2tDAFZYtZN99LDiLCgKNlNEo_M_-</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1DFGkR3zfnAvA8qCUaBEN1TTSe0-7-uhI">https://drive.google.com/drive/folders/1DFGkR3zfnAvA8qCUaBEN1TTSe0-7-uhI</a></span></dd>
                 </dl>
 
                 <p className="ml-10 text-2xl font-medium m-5 font-[poppins]">Laws of Motion Momentum for Class 11th</p>
                 <dl className="m-10 font-[poppins] text-lg leading-8">
                     <dt className="font-bold">Class 11th</dt>
-                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1N_ORb6JtV7ph7qzgmHzshRzDNC7ufQL3">https://drive.google.com/drive/folders/1N_ORb6JtV7ph7qzgmHzshRzDNC7ufQL3</a></span></dd>
+                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span>Click here 👉 </span><span><a className="text-blue-800" href="https://drive.google.com/drive/folders/1eamJVqKdfPD7lHQn8CIZpNXdLd-Tejxh">https://drive.google.com/drive/folders/1eamJVqKdfPD7lHQn8CIZpNXdLd-Tejxh</a></span></dd>
                 </dl>
             </>
         }
