@@ -15,6 +15,7 @@ const Page = () => {
           </p>
 
           <BatchCard
+            id="pre-foundation"
             title="Pre‑Foundation Batch (Classes 6 & 7)"
             description="Lays the essential groundwork in Maths and Science for students entering classes 6 and 7. Strengthens conceptual clarity, analytical skills, and creativity through interactive methods."
             features={[
@@ -28,6 +29,7 @@ const Page = () => {
           />
 
           <BatchCard
+            id="foundation"
             title="Foundation Batch (Classes 8 to 10)"
             description="Builds on foundational knowledge to tackle more advanced concepts. Balances school syllabus with competitive exam prep for Olympiads, JEE, and NEET."
             features={[
@@ -41,6 +43,7 @@ const Page = () => {
           />
 
           <BatchCard
+            id="physics"
             title="Physics Batch (Classes 11 & 12)"
             description="Prepares students for board exams and JEE/NEET with deep concept teaching and advanced problem-solving sessions."
             features={[

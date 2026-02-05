@@ -33,11 +33,10 @@ const AutoSlider = () => {
   if (deviceType === 'unknown') return null;
 
   return (
-    <>
+    <div id="achievements" className="scroll-mt-24">
       <p
-        className={`font-extrabold text-black text-2xl text-center font-[poppins] ${
-          isTv ? 'text-4xl mt-12 mb-6' : 'mt-4 mb-2 sm:mt-16'
-        }`}
+        className={`font-extrabold text-black text-2xl text-center font-[poppins] ${isTv ? 'text-4xl mt-12 mb-6' : 'mt-4 mb-2 sm:mt-16'
+          }`}
       >
         Varunam Achievements
       </p>
@@ -63,9 +62,8 @@ const AutoSlider = () => {
                   alt={`Slide ${i + 1}`}
                   width={600}
                   height={400}
-                  className={`object-contain ${
-                    isTv ? 'w-[80%]' : 'w-[80%]'
-                  } h-auto`}
+                  className={`object-contain ${isTv ? 'w-[80%]' : 'w-[80%]'
+                    } h-auto`}
                 />
               </div>
             ))}
@@ -87,7 +85,7 @@ const AutoSlider = () => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
