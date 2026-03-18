@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="z-50 w-[95vw] 2xl:w-[85vw] h-[6vh] sm:h-[8vh] lg:h-[13vh] 2xl:h-[8vh] p-0.5 py-1 m-auto mt-2 flex items-center justify-between bg-white text-black drop-shadow-lg/50 rounded-md relative">
+            <nav className="z-50 w-[95vw] 2xl:w-[85vw] h-[6vh] sm:h-[8vh] lg:h-[13vh] 2xl:h-[8vh] p-0.5 py-1 m-auto mt-2 flex items-center justify-between bg-white text-black drop-shadow-lg/50 rounded-md fixed top-0 right-0 left-0">
                 <div className="flex items-center grow-2 ">
                     <button onClick={() => setMenuOpen(!menuOpen)}>
                         <Image
