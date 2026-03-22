@@ -76,9 +76,10 @@ export const metadata = {
 // ✅ Root Layout
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body
         className={`${poppins.variable} ${montserrat.variable} ${inter.variable} ${lato.variable} ${oswald.variable} ${roboto.variable} ${orbitron.variable} ${rowdies.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
         {/* ✅ SessionProvider wraps the whole app for NextAuth */}
         <Providers>
