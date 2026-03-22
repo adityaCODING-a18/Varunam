@@ -18,7 +18,7 @@ import Footer from "./Component/Footer";
 export default function Home() {
   return (
     <>
-      <div id="main-container" className="bg-[#D4FFFD] w-screen h-screen overflow-x-hidden m-0 p-0 text-black">
+      <div id="main-container" className="bg-[#D4FFFD] w-screen min-h-screen overflow-x-hidden m-0 pt-[8vh] sm:pt-[10vh] lg:pt-[16vh] 2xl:pt-[11vh] text-black">
         <Navbar />
         <HeroSection />
         <Discription link="/aboutus" title="About" lighted="Varunam" disc="is a leading coaching institute in Jehanabad, Bihar, helping students from Class 6th to 12th achieve excellence in school boards and competitive exams. With expert faculty, innovative teaching methods, and personal attention — we’re here to shape winners." btntext="Know more about us" />
