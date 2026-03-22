@@ -109,10 +109,6 @@ const Footer = () => {
                                     <FaYoutube size={30} />
                                 </a>
                             </div>
-
-                            <p className="text-base font-bold text-gray-300 order-3 flex items-center gap-1">
-                                Designed by <span className="text-[#3DF4FA] font-black hover:underline cursor-pointer">Aditya Raj</span>
-                            </p>
                         </div>
                     </div>
                 </div>
